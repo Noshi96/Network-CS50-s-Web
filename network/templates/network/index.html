@@ -1,0 +1,88 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<h2 class="left-up-header">All Posts</h2>
+
+<div id="user_profile_view"></div>
+
+<div id="compose-view" class="compose-view">
+{% if user.is_authenticated %}
+
+   <div class="wrapper">
+      <div claas="new-post">
+         <h5>New Post</h5>
+      </div>
+      <div class="input-box">
+         <div class="tweet-area">
+            <div class="input editable" contenteditable="true" spellcheck="false"></div>
+         </div>
+      </div>
+      <div class="bottom">
+         <div class="content">
+            <button id="postbutton" type="submit">Post</button>
+         </div>
+      </div>
+   </div>
+
+{% endif %}
+</div>
+
+<div id="display-posts">
+</div>
+
+<!-- <div class="tweet-wrap">
+  <div class="tweet-header">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="" class="avatar">
+     <div class="tweet-header-info">
+        Steve Schoger <span>@Steve Schoger</span>
+        <span>. Jun 27
+        </span>
+        <p>🔥 If you're tired of using outline styles for secondary buttons, a soft solid background based on the text color can be a great alternative.</p>
+     </div>
+  </div>
+  <div class="tweet-info-counts">
+     <div class="likes">
+        <svg class="feather feather-heart sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <div class="likes-count">
+           2.6k
+        </div>
+     </div>
+  </div>
+</div>
+
+<div class="tweet-wrap">
+  <div class="tweet-header">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="" class="avatar">
+     <div class="tweet-header-info">
+        Steve Schoger <span>@Steve Schoger</span>
+        <span>. Jun 27
+        </span>
+        <p>🔥 If you're tired of using outline styles for secondary buttons, a soft solid background based on the text color can be a great alternative.</p>
+     </div>
+  </div>
+  <div class="tweet-info-counts">
+     <div class="likes">
+        <svg class="feather feather-heart sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <div class="likes-count">
+           2.6k
+        </div>
+     </div>
+  </div>
+</div> -->
+
+<div id="navigation-center-div" class="center-div">
+
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/network.js' %}"></script>
+{% endblock %}
